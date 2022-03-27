@@ -4,15 +4,30 @@ Just tests with AWS SAM
 
 **Run invoke local:**
 ```bash
- sam local invoke "HelloWorldFunction"
+sam local invoke "HelloWorldFunction"
 ```
 
 **Start "API Gateway local":**
 ```bash
 # is hot reload
- sam local start-api
+sam local start-api
 ```
 
+**In VScode hit F5**
+- This will run as debug.
+
+**Deploy Lambda with SAM**
+```bash
+sam build
+```
+```bash
+sam deploy -g
+```
+
+**Destroy Deploy from AWS with SAM**
+```bash
+sam build
+```
 ## About AWS SAM
 
 This project contains source code and supporting files for a serverless application that you can deploy with the SAM CLI. It includes the following files and folders.
