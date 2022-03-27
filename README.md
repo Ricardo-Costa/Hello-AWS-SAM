@@ -7,6 +7,12 @@ Just tests with AWS SAM
  sam local invoke "HelloWorldFunction"
 ```
 
+**Start "API Gateway local":**
+```bash
+# is hot reload
+ sam local start-api
+```
+
 ## About AWS SAM
 
 This project contains source code and supporting files for a serverless application that you can deploy with the SAM CLI. It includes the following files and folders.
