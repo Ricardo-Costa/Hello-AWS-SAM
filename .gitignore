@@ -136,8 +136,6 @@ dist/
 # TernJS port file
 .tern-port
 
-.vscode
-
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
 
@@ -208,3 +206,10 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/osx,node,linux,windows,sam
+
+
+
+# SAM configs
+
+.vscode/*
+!.vscode/launch.json
