@@ -16,14 +16,32 @@ let response;
  */
 exports.lambdaHandler = async (event, context) => {
     try {
+
+      let specialBody = {}
+      switch (event?.httpMethod) {
+        case "POST":
+          specialBody = JSON.stringify({
+            message: event.body.message
+          })
+        default:
+          specialBody = JSON.stringify({
+            message: 'hello world'
+          })
+
+      }
+
         // const ret = await axios(url);
+        // response = {
+        //     'statusCode': 200,
+        //     'body': JSON.stringify({
+        //         message: 'hello world',
+        //         // message: event.body.message,
+        //         // location: ret.data.trim()
+        //     })
+        // }
         response = {
             'statusCode': 200,
-            'body': JSON.stringify({
-                message: 'hello world',
-                // message: event.body.message,
-                // location: ret.data.trim()
-            })
+            'body': specialBody
         }
     } catch (err) {
         console.log(err);
